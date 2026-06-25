@@ -8,6 +8,7 @@ export const Route = createFileRoute("/")({
       { title: "سورۃ البقرۃ — آیات ۲۱ تا ۷۰" },
       { name: "description", content: "سورۃ البقرہ کی آیات ۲۱ تا ۷۰ — لفظ بہ لفظ مطلب اور مکمل ترجمہ" },
     ],
+  }),
   component: Index,
 });
 
