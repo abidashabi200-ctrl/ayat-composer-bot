@@ -5,8 +5,8 @@ import { ayat } from "@/lib/ayat-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "سورۃ البقرۃ — آیات ۲۱ تا ۷۰" },
-      { name: "description", content: "سورۃ البقرہ کی آیات ۲۱ تا ۷۰ — لفظ بہ لفظ مطلب اور مکمل ترجمہ" },
+      { title: "سورۃ البقرۃ — آیات ۲۱ تا ۱۴۱" },
+      { name: "description", content: "سورۃ البقرہ کی آیات ۲۱ تا ۱۴۱ — لفظ بہ لفظ مطلب اور مکمل ترجمہ" },
     ],
   }),
   component: Index,
@@ -38,7 +38,7 @@ function Index() {
   const go = (delta: number) => {
     if (!ayah) return;
     const next = ayah.n + delta;
-    if (next < 21 || next > 70) return;
+    if (next < 21 || next > 141) return;
     openAyah(next);
   };
 
@@ -54,7 +54,7 @@ function Index() {
             سورۃ البقرۃ
           </h1>
           <h2 className="urdu mt-2 text-2xl md:text-3xl text-[color:var(--color-gold)]">
-            آیات ۲۱ تا ۷۰
+            آیات ۲۱ تا ۱۴۱
           </h2>
           <p className="urdu mt-3 text-sm md:text-base text-muted-foreground">
             لفظ بہ لفظ مطلب سیکھیں — ہر لفظ پر ٹیپ کریں
@@ -227,7 +227,7 @@ function Index() {
               </button>
               <button
                 onClick={() => go(1)}
-                disabled={ayah.n === 70}
+                disabled={ayah.n === 141}
                 className="flex-1 rounded-xl bg-card border border-border urdu py-3 disabled:opacity-40 hover:border-primary"
               >
                 اگلا →
