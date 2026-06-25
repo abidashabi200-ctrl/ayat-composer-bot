@@ -38,7 +38,7 @@ function Index() {
   const go = (delta: number) => {
     if (!ayah) return;
     const next = ayah.n + delta;
-    if (next < 21 || next > 40) return;
+    if (next < 21 || next > 70) return;
     openAyah(next);
   };
 
