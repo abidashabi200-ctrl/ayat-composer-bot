@@ -5,10 +5,9 @@ import { ayat } from "@/lib/ayat-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "سورۃ البقرۃ — آیات ۲۱ تا ۴۰" },
-      { name: "description", content: "سورۃ البقرہ کی آیات ۲۱ تا ۴۰ — لفظ بہ لفظ مطلب اور مکمل ترجمہ" },
+      { title: "سورۃ البقرۃ — آیات ۲۱ تا ۷۰" },
+      { name: "description", content: "سورۃ البقرہ کی آیات ۲۱ تا ۷۰ — لفظ بہ لفظ مطلب اور مکمل ترجمہ" },
     ],
-  }),
   component: Index,
 });
 
