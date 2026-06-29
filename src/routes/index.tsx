@@ -70,14 +70,21 @@ function Index() {
         </div>
 
         {/* Counters */}
-        <div className="flex justify-center gap-3 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 mb-8">
           <div className="rounded-xl bg-success/20 border border-success px-4 py-2 urdu text-sm">
             ✅ یاد — {urduNum(yesCount)}
           </div>
           <div className="rounded-xl bg-danger/20 border border-danger px-4 py-2 urdu text-sm">
             ❌ یاد نہیں — {urduNum(noCount)}
           </div>
+          <Link
+            to="/mcq"
+            className="rounded-xl bg-primary/90 hover:bg-primary text-primary-foreground border border-primary px-4 py-2 urdu text-sm font-bold"
+          >
+            📝 MCQs (۱ تا ۲۰)
+          </Link>
         </div>
+
 
         {!ayah ? (
           /* INDEX */
