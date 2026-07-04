@@ -83,6 +83,12 @@ function Index() {
           >
             📝 MCQs (۱ تا ۲۰)
           </Link>
+          <Link
+            to="/repeated"
+            className="rounded-xl bg-[color:var(--color-gold)]/90 hover:bg-[color:var(--color-gold)] text-background border border-[color:var(--color-gold)] px-4 py-2 urdu text-sm font-bold"
+          >
+            🔁 دہرائے گئے الفاظ کوئز
+          </Link>
         </div>
 
 
