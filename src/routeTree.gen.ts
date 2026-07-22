@@ -9,15 +9,9 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as RepeatedRouteImport } from './routes/repeated'
 import { Route as McqRouteImport } from './routes/mcq'
 import { Route as IndexRouteImport } from './routes/index'
 
-const RepeatedRoute = RepeatedRouteImport.update({
-  id: '/repeated',
-  path: '/repeated',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const McqRoute = McqRouteImport.update({
   id: '/mcq',
   path: '/mcq',
@@ -32,42 +26,31 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/mcq': typeof McqRoute
-  '/repeated': typeof RepeatedRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/mcq': typeof McqRoute
-  '/repeated': typeof RepeatedRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/mcq': typeof McqRoute
-  '/repeated': typeof RepeatedRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/mcq' | '/repeated'
+  fullPaths: '/' | '/mcq'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/mcq' | '/repeated'
-  id: '__root__' | '/' | '/mcq' | '/repeated'
+  to: '/' | '/mcq'
+  id: '__root__' | '/' | '/mcq'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   McqRoute: typeof McqRoute
-  RepeatedRoute: typeof RepeatedRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/repeated': {
-      id: '/repeated'
-      path: '/repeated'
-      fullPath: '/repeated'
-      preLoaderRoute: typeof RepeatedRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/mcq': {
       id: '/mcq'
       path: '/mcq'
@@ -88,7 +71,6 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   McqRoute: McqRoute,
-  RepeatedRoute: RepeatedRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
