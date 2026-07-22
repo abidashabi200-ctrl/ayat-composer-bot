@@ -68,3 +68,14 @@
   direction: rtl;
   line-height: 2.2;
 }
+
+@keyframes blink-correct {
+  0%, 100% { background-color: color-mix(in oklch, var(--color-success) 20%, transparent); }
+  50% { background-color: color-mix(in oklch, var(--color-success) 60%, transparent); }
+}
+@keyframes blink-wrong {
+  0%, 100% { background-color: color-mix(in oklch, var(--color-danger) 20%, transparent); }
+  50% { background-color: color-mix(in oklch, var(--color-danger) 60%, transparent); }
+}
+.blink-correct { animation: blink-correct 0.5s ease-in-out 3; }
+.blink-wrong { animation: blink-wrong 0.5s ease-in-out 3; }
