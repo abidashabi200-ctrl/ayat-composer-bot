@@ -1,3 +1,4 @@
+import { part as p5 } from "./ayat-part-263-286";
 import { part as p0 } from "./ayat-part-142-165";
 import { part as p1 } from "./ayat-part-166-190";
 import { part as p2 } from "./ayat-part-191-215";
@@ -2328,4 +2329,4 @@ const base: Ayah[] = [
   },
 ];
 
-export const ayat: Ayah[] = [...base, ...p0, ...p1, ...p2, ...p3, ...p4];
+export const ayat: Ayah[] = [...base, ...p0, ...p1, ...p2, ...p3, ...p4, ...p5];
