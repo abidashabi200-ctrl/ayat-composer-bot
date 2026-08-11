@@ -39,7 +39,7 @@ function Index() {
   const go = (delta: number) => {
     if (!ayah) return;
     const next = ayah.n + delta;
-    if (next < 1 || next > 286) return;
+    if (next < 1 || next > ayat[ayat.length - 1].n) return;
     openAyah(next);
   };
 
@@ -235,7 +235,7 @@ function Index() {
               </button>
               <button
                 onClick={() => go(1)}
-                disabled={ayah.n === 286}
+                disabled={ayah.n === ayat[ayat.length - 1].n}
                 className="flex-1 rounded-xl bg-card border border-border urdu py-3 disabled:opacity-40 hover:border-primary"
               >
                 اگلا →

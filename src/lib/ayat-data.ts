@@ -1,7 +1,12 @@
+import { part as p0 } from "./ayat-part-142-165";
+import { part as p1 } from "./ayat-part-166-190";
+import { part as p2 } from "./ayat-part-191-215";
+import { part as p3 } from "./ayat-part-216-240";
+import { part as p4 } from "./ayat-part-241-262";
 export type Word = { ar: string; ur: string };
 export type Ayah = { n: number; words: Word[]; translation: string };
 
-export const ayat: Ayah[] = [
+const base: Ayah[] = [
   {
     n: 1,
     words: [
@@ -2322,3 +2327,5 @@ export const ayat: Ayah[] = [
       "وہ ایک امت تھی جو گزر چکی، اُن کے لیے ہے جو اُنہوں نے کمایا اور تمہارے لیے ہے جو تم نے کمایا، اور اُن کے اعمال کے بارے میں تم سے نہیں پوچھا جائے گا۔",
   },
 ];
+
+export const ayat: Ayah[] = [...base, ...p0, ...p1, ...p2, ...p3, ...p4];
